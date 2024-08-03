@@ -63,8 +63,8 @@ body{
     transition: 0.5s;
     color: var(--c);
 }
-.navigation ul li:hover a .icon{
-    transform: translateY(-35px);
+.navigation ul li.active a .icon{
+    transform: translateY(-32px);
 }
 
 .navigation ul li a .text{
@@ -77,7 +77,42 @@ body{
     opacity: 0;
     transform: translateY(20px);
 }
-.navigation ul li:hover a .text{
+.navigation ul li.active a .text{
     opacity: 1;
     transform: translateY(10px);
+}
+
+
+
+.navigation ul .indicator{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: purple;
+    top: -50%;
+    border: 6px solid var(--c);
+    transition: 0.5s;
+}
+.navigation ul .indicator::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -22px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-right-radius: 20px;
+    box-shadow: 0 -10px 0 0 var(--c);
+}
+.navigation ul .indicator::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -22px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-left-radius: 20px;
+    box-shadow: 0 -10px 0 0 var(--c);
 }
