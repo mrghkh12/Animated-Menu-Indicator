@@ -65,6 +65,7 @@ body{
 }
 .navigation ul li.active a .icon{
     transform: translateY(-32px);
+    color: #f0eaea;
 }
 
 .navigation ul li a .text{
